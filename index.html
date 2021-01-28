@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>获取随机手机号</title>
+	</head>
+	<body style="color: pink; font-size: 28px; font-weight: 700;"></body>
+</html>
+<script>
+	const headerNums = new Array(
+		'139',
+		'138',
+		'137',
+		'136',
+		'135',
+		'134',
+		'159',
+		'158',
+		'157',
+		'150',
+		'151',
+		'152',
+		'188',
+		'187',
+		'182',
+		'183',
+		'184',
+		'178',
+		'130',
+		'131',
+		'132',
+		'156',
+		'155',
+		'186',
+		'185',
+		'176',
+		'133',
+		'153',
+		'189',
+		'180',
+		'181',
+		'177'
+	);
+	const headerNum = headerNums[parseInt(Math.random() * 10, 10)];
+	const bodyNum = Math.random().toString().replace('0.', '').slice(0, 8);
+	let phoneNum = headerNum + bodyNum;
+	console.log(phoneNum);
+	document.write('刷新获取随机手机号\n' + phoneNum);
+</script>
